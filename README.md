@@ -154,7 +154,7 @@ $bot = new Bot('TOKEN');
 
 if($bot->request_msg=='message_query' and $bot->data_text == '/start'){
     $bot->sendMessage('this_chat','Календарь',calendar());    
-}elseif($bot->request_msg=='callback_query'){
+}elseif($bot->request_msg=='callback_query' and $bot->arr_data_text[0] == 'calendar'){
     $bot->sendMessage('this_chat','Вы выбрали дату:'.$bot->calendar_date);
     }
 ```
