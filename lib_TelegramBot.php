@@ -21,7 +21,7 @@ class Bot
         $this->token = $token;
         $this->data = json_decode(file_get_contents('php://input'), true);
 
-        file_put_contents('/home/lashuk/acces_root/login.txt', print_r($this->data, true));
+        file_put_contents('data_telegram.txt', print_r($this->data, true));
 
         if (!empty($this->data['message']['text'])) {
 
@@ -267,7 +267,7 @@ class Bot
         $data = curl_exec($ch);
         $data = json_decode($data, true);
         if ($data['error_code']) {
-            file_put_contents('/home/lashuk/acces_root/error_bot.txt', print_r($data, true),FILE_APPEND);
+            file_put_contents('error_bot.txt', print_r($data, true),FILE_APPEND);
         }
     }
 }
