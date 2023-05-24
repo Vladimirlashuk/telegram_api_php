@@ -151,6 +151,7 @@ $bot->sendMessage('this_chat','Клавиатура',$inline_kb->created_keyboar
 require_once 'lib_TelegramBot.php';
 
 $bot = new Bot('TOKEN');
+#use calendar();-date now.  OR  calendar('2023-06-01');
 
 if($bot->request_msg=='message_query' and $bot->data_text == '/start'){
     $bot->sendMessage('this_chat','Календарь',calendar());    
