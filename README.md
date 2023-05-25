@@ -26,7 +26,7 @@ require_once 'lib_TelegramBot.php';
     $bot->data_text; #simple message, including commands
     $bot->arr_data_text;#Array of words in the message, space separated
     #example
-    $callback='but1 param 1'
+    $callback_data='but1 param 1'
     $bot->arr_data_text[0]=but1
     $bot->arr_data_text[1]=param
     $bot->arr_data_text[2]=1
